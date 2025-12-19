@@ -23,7 +23,7 @@ The project is organized into three main files:
 ## Current State
 The calculator interface is fully displayed in the browser.
 Buttons are clickable and detected using JavaScript event listeners.
-The calculator now supports addition between two numbers using the "+" operator.
+The calculator now supports addition between two numbers using the "+" operator. It's fonctionnal.
 
 No calculation logic has been implemented yet.
 
