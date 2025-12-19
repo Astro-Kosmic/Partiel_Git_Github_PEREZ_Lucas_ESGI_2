@@ -9,6 +9,7 @@ let firstValue = null;
 
 // Flag to indicate if the addition operator is active
 let isAddition = false;
+let isSubtraction = false;
 
 // Handle calculator button interactions
 
@@ -30,16 +31,33 @@ buttons.forEach(button => {
             display.value = "";
         }
 
-        // If "=" is clicked, perform the addition
-        else if (value === "=" && isAddition) {
-            const secondValue = parseFloat(display.value);
-            const result = firstValue + secondValue;
+        // If the "-" button is clicked, prepare subtraction
+        else if (value === "-") {
+            firstValue = parseFloat(display.value);
+            isSubtraction = true;
+            isAddition = false;
+            display.value = "";
+        }
 
-            display.value = result;
+        // If "=" is clicked, perform the selected operation
+        else if (value === "=") {
+            const secondValue = parseFloat(display.value);
+            let result = null;
+
+            if (isAddition) {
+                result = firstValue + secondValue;
+            } else if (isSubtraction) {
+                result = firstValue - secondValue;
+            }
+
+            if (result !== null) {
+                display.value = result;
+            }
 
             // Reset values after calculation
             firstValue = null;
             isAddition = false;
+            isSubtraction = false;
         }
 
         // Clear the display and reset all stored values
@@ -47,6 +65,7 @@ buttons.forEach(button => {
             display.value = "";
             firstValue = null;
             isAddition = false;
+            isSubtraction = false;
         }
     });
 });
