@@ -18,17 +18,15 @@ The project is organized into three main files:
   Handles the visual styling of the calculator.
 
 - `calculator.js`  
-  Contains the JavaScript logic (currently minimal).
+  Contains the JavaScript logic.
 
 ## Current State
 The calculator interface is fully displayed in the browser.
 Buttons are clickable and detected using JavaScript event listeners.
 The calculator now supports addition between two numbers using the "+" operator.
+The calculator now supports subtraction between two numbers using the "-" operator.
 
-No calculation logic has been implemented yet.
 
 ## Next Steps
 Future development will include:
-- Displaying user input on the screen
-- Handling arithmetic operations
-- Computing and displaying calculation results
+- The multiplication feature
