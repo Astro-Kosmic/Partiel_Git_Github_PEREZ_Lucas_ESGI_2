@@ -10,6 +10,7 @@ let firstValue = null;
 // Flag to indicate if the addition operator is active
 let isAddition = false;
 let isSubtraction = false;
+let isMultiplication = false;
 
 // Handle calculator button interactions
 
@@ -24,22 +25,34 @@ buttons.forEach(button => {
             display.value += value;
         }
 
-        // If the "+" button is clicked, store the first value
+        // Prepare addition
         else if (value === "+") {
             firstValue = parseFloat(display.value);
             isAddition = true;
+            isSubtraction = false;
+            isMultiplication = false;
             display.value = "";
         }
 
-        // If the "-" button is clicked, prepare subtraction
+        // Prepare subtraction
         else if (value === "-") {
             firstValue = parseFloat(display.value);
             isSubtraction = true;
             isAddition = false;
+            isMultiplication = false;
             display.value = "";
         }
 
-        // If "=" is clicked, perform the selected operation
+        // Prepare multiplication
+        else if (value === "*") {
+            firstValue = parseFloat(display.value);
+            isMultiplication = true;
+            isAddition = false;
+            isSubtraction = false;
+            display.value = "";
+        }
+
+        // Perform calculation
         else if (value === "=") {
             const secondValue = parseFloat(display.value);
             let result = null;
@@ -48,6 +61,8 @@ buttons.forEach(button => {
                 result = firstValue + secondValue;
             } else if (isSubtraction) {
                 result = firstValue - secondValue;
+            } else if (isMultiplication) {
+                result = firstValue * secondValue;
             }
 
             if (result !== null) {
@@ -58,14 +73,16 @@ buttons.forEach(button => {
             firstValue = null;
             isAddition = false;
             isSubtraction = false;
+            isMultiplication = false;
         }
 
-        // Clear the display and reset all stored values
+        // Clear calculator state
         else if (value === "C") {
             display.value = "";
             firstValue = null;
             isAddition = false;
             isSubtraction = false;
+            isMultiplication = false;
         }
     });
 });

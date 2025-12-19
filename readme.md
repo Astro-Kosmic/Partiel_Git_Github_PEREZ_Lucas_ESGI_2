@@ -25,8 +25,10 @@ The calculator interface is fully displayed in the browser.
 Buttons are clickable and detected using JavaScript event listeners.
 The calculator now supports addition between two numbers using the "+" operator.
 The calculator now supports subtraction between two numbers using the "-" operator.
+The calculator now supports multiplication between two numbers using the "*" operator.
 
 
 ## Next Steps
 Future development will include:
-- The multiplication feature
+- The division feature
+- Improve the interface
