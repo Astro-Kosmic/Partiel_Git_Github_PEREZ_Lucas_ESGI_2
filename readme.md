@@ -1,34 +1,125 @@
-# Web Calculator
+# 📄 Project Information
 
-## Project Description
-This project is a simple web-based calculator developed to practice:
-- HTML, CSS and JavaScript basics
-- Git workflow with branches
-- Commit history and conflict resolution
+- **Student Name**: Lucas PEREZ
+- **Class**: ESGI – [ESGI 2]
+- **Module**: Versionning Git
+- **Academic Year**: 2025 – 2026
+- **Project Type**: Partiel final
 
-At this stage, the project focuses on building the user interface and setting up the project structure.
+---
 
-## Project Structure
-The project is organized into three main files:
+---
 
-- `index.html`  
-  Defines the calculator structure and layout.
+# 🧮 Web Calculator
 
-- `style.css`  
-  Handles the visual styling of the calculator.
+A clean and lightweight web-based calculator developed to practice front-end fundamentals
+and professional Git workflow management.
 
-- `calculator.js`  
-  Contains the JavaScript logic.
+---
 
-## Current State
-The calculator interface is fully displayed in the browser.
-Buttons are clickable and detected using JavaScript event listeners.
-The calculator now supports addition between two numbers using the "+" operator.
-The calculator now supports subtraction between two numbers using the "-" operator.
-The calculator now supports multiplication between two numbers using the "*" operator.
+## 📌 Project Overview
+
+This project is a simple calculator application running entirely in the browser.
+It was designed as a learning exercise with the following objectives:
+
+- Build a functional calculator using **HTML, CSS, and JavaScript**
+- Apply a structured **Git workflow** with feature branches, merges, and conflict resolution
+
+No external libraries or frameworks are used in this project.
+
+---
+
+## 📁 Project Structure
+
+```text
+/
+├── index.html        # Calculator interface structure
+├── style.css         # Visual styling and layout
+└── calculator.js     # Application logic and arithmetic operations
+```
+## ⚙️ Features
 
 
-## Next Steps
-Future development will include:
-- The division feature
-- Improve the interface
+➕ Addition
+
+Allows users to add two numbers using the + operator
+
+Displays the result after pressing the equals (=) button
+
+➖ Subtraction
+
+Enables subtraction between two values using the - operator
+
+The result is shown immediately after validation
+
+✖️ Multiplication
+
+Supports multiplication using the * operator
+
+Follows the same interaction logic as other operations
+
+🔄 Clear Function
+
+A clear (C) button resets the calculator state
+
+Clears both the display and internal stored values
+
+---
+
+## 🖥️ User Interaction
+
+User input is handled exclusively through on-screen buttons
+
+Only one operation at a time is processed to keep the logic simple and readable
+
+All calculations are performed client-side using JavaScript
+
+---
+
+## 🛠️ Technical Implementation
+
+A single event listener manages all calculator button interactions
+
+Internal state is handled using JavaScript variables and operator flags
+
+The application logic was developed incrementally to ensure clarity and maintainability
+
+---
+
+## 🔀 Development Workflow
+
+The project follows a professional Git workflow:
+
+main
+Represents the final and stable version of the project
+
+develop
+Used as the integration branch for all features
+
+feature/*
+Each calculator functionality was implemented in a dedicated feature branch
+
+The README.md file is intentionally modified across multiple branches to practice
+manual conflict resolution during merges.
+
+---
+
+## 🚀 Possible Improvements
+
+Future enhancements may include:
+
+Division support
+
+Chained arithmetic operations
+
+Improved input validation
+
+Keyboard input support
+
+Enhanced user interface design
+
+---
+
+## 📄 License
+
+This project was created for educational purposes.
