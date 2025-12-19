@@ -1,0 +1,10 @@
+{
+  "name": "Partiel_Git_Github_PEREZ_Lucas_ESGI_2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "calculator.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "private": true
+}
